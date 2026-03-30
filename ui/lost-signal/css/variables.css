@@ -1,0 +1,82 @@
+/* ========================================
+   LOST SIGNAL — Design Tokens
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* ── Colors ── */
+  --col-bg:           #050508;
+  --col-bg-dark:      #020203;
+  --col-surface:      #0d0d12;
+  --col-surface-alt:  #12121a;
+  --col-border:       #1a1a2e;
+  --col-border-glow:  #1e1e3a;
+  
+  /* Neon accents */
+  --col-neon-green:   #00ff41;
+  --col-neon-cyan:    #00f0ff;
+  --col-neon-red:     #ff0040;
+  --col-neon-amber:   #ffa500;
+  --col-neon-purple:  #b44aff;
+  --col-neon-blue:    #4a7aff;
+  
+  /* Text */
+  --col-text:         #c8c8d0;
+  --col-text-dim:     #606070;
+  --col-text-bright:  #ffffff;
+  
+  /* Semantic */
+  --col-success:      #00ff41;
+  --col-warning:      #ffa500;
+  --col-danger:       #ff0040;
+  --col-info:         #00f0ff;
+  
+  /* ── Typography ── */
+  --font-mono:        'Space Mono', 'Share Tech Mono', 'Courier New', monospace;
+  --font-display:     'Orbitron', sans-serif;
+  
+  --fs-xs:   0.625rem;    /* 10px */
+  --fs-sm:   0.75rem;     /* 12px */
+  --fs-base: 0.875rem;    /* 14px */
+  --fs-md:   1rem;        /* 16px */
+  --fs-lg:   1.25rem;     /* 20px */
+  --fs-xl:   1.75rem;     /* 28px */
+  --fs-2xl:  2.5rem;      /* 40px */
+  --fs-3xl:  3.5rem;      /* 56px */
+  --fs-4xl:  5rem;        /* 80px */
+  
+  /* ── Spacing ── */
+  --sp-xs:   0.25rem;
+  --sp-sm:   0.5rem;
+  --sp-md:   1rem;
+  --sp-lg:   1.5rem;
+  --sp-xl:   2rem;
+  --sp-2xl:  3rem;
+  --sp-3xl:  4rem;
+  
+  /* ── Effects ── */
+  --glow-green:  0 0 10px rgba(0, 255, 65, 0.5), 0 0 40px rgba(0, 255, 65, 0.15);
+  --glow-cyan:   0 0 10px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.15);
+  --glow-red:    0 0 10px rgba(255, 0, 64, 0.5), 0 0 40px rgba(255, 0, 64, 0.15);
+  --glow-amber:  0 0 10px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 165, 0, 0.15);
+  
+  --text-glow-green: 0 0 7px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+  --text-glow-cyan:  0 0 7px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4);
+  --text-glow-red:   0 0 7px rgba(255, 0, 64, 0.8), 0 0 20px rgba(255, 0, 64, 0.4);
+  
+  /* ── Transitions ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   600ms;
+  
+  /* ── Z-Index ── */
+  --z-base:      1;
+  --z-overlay:   10;
+  --z-modal:     100;
+  --z-scanline:  500;
+  --z-crt:       900;
+  --z-boot:      1000;
+}

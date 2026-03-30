@@ -1,0 +1,8 @@
+mkdir "c:\portfolio\ui\travel\images"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\hero_travel_1774805339830.png" "c:\portfolio\ui\travel\images\hero.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_sapa_1774805358652.png" "c:\portfolio\ui\travel\images\sapa.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_hoian_1774805374560.png" "c:\portfolio\ui\travel\images\hoian.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_dalat_1774805402269.png" "c:\portfolio\ui\travel\images\dalat.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_phuquoc_1774805420379.png" "c:\portfolio\ui\travel\images\phuquoc.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_nhatrang_1774805436715.png" "c:\portfolio\ui\travel\images\nhatrang.png"
+copy "C:\Users\anhtr\.gemini\antigravity\brain\e83f5bd3-cf64-4b61-8e80-13283f8a1f73\dest_phongnya_1774805451359.png" "c:\portfolio\ui\travel\images\phongnya.png"

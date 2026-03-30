@@ -1,0 +1,223 @@
+/* ========================================
+   LOST SIGNAL — Phase 2: Image Repair
+   ======================================== */
+
+.phase-repair {
+  background: var(--col-bg-dark);
+}
+
+.repair-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-xl);
+}
+
+.repair-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--col-neon-amber);
+  text-shadow: var(--glow-amber);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.repair-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--col-text-dim);
+  text-align: center;
+  margin-top: var(--sp-xs);
+}
+
+/* ── Puzzle Grid ── */
+.puzzle-area {
+  display: flex;
+  gap: var(--sp-xl);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 3px;
+  width: min(380px, 85vw);
+  height: min(380px, 85vw);
+  background: var(--col-surface);
+  border: 2px solid var(--col-border-glow);
+  padding: 3px;
+  position: relative;
+}
+
+.puzzle-grid::after {
+  content: 'TARGET FRAME';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Individual puzzle cell */
+.puzzle-cell {
+  background: var(--col-bg-dark);
+  border: 1px solid var(--col-border);
+  position: relative;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+}
+
+.puzzle-cell.highlight {
+  border-color: var(--col-neon-cyan);
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.puzzle-cell.filled {
+  border-color: var(--col-neon-green);
+  animation: cell-fill 0.4s ease;
+}
+
+@keyframes cell-fill {
+  0% { transform: scale(1.1); filter: brightness(2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* ── Scrambled Pieces Source ── */
+.puzzle-source {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  width: min(250px, 50vw);
+}
+
+.puzzle-source::before {
+  content: 'CORRUPTED FRAGMENTS';
+  grid-column: 1 / -1;
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-xs);
+}
+
+/* Puzzle piece */
+.puzzle-piece {
+  aspect-ratio: 1;
+  cursor: grab;
+  border: 1px solid var(--col-border);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  background-size: 400% 400%;
+}
+
+.puzzle-piece:hover {
+  border-color: var(--col-neon-cyan);
+  box-shadow: var(--glow-cyan);
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.puzzle-piece.dragging {
+  opacity: 0.7;
+  transform: scale(1.1) rotate(2deg);
+  cursor: grabbing;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.puzzle-piece.placed {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+/* Corruption overlay on pieces */
+.puzzle-piece::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(255,0,64,0.05) 3px,
+      rgba(255,0,64,0.05) 4px
+    );
+  pointer-events: none;
+  animation: corruption-shift 2s steps(3) infinite;
+}
+
+@keyframes corruption-shift {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(-2px); }
+  66% { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+/* Repair Progress */
+.repair-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  width: min(380px, 85vw);
+}
+
+.repair-progress__label {
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.repair-progress__bar {
+  flex: 1;
+  height: 4px;
+  background: var(--col-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.repair-progress__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--col-neon-amber), var(--col-neon-green));
+  transition: width 0.4s var(--ease-out);
+  border-radius: 2px;
+}
+
+.repair-progress__count {
+  font-size: var(--fs-sm);
+  color: var(--col-neon-amber);
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Repair complete flash */
+.repair-complete-flash {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 255, 65, 0.15);
+  z-index: var(--z-modal);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.repair-complete-flash.flash {
+  animation: repair-flash 0.8s ease;
+}
+
+@keyframes repair-flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,318 @@
+/* ========================================
+   LOST SIGNAL — Base Styles & CRT Effects
+   ======================================== */
+
+body {
+  font-family: var(--font-mono);
+  font-size: var(--fs-base);
+  color: var(--col-text);
+  background: var(--col-bg);
+  position: relative;
+}
+
+/* ── CRT Monitor Overlay ── */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-crt);
+}
+
+/* Scanlines */
+.crt-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(0, 0, 0, 0.08) 1px,
+    rgba(0, 0, 0, 0.08) 2px
+  );
+  z-index: var(--z-scanline);
+  animation: scanline-flicker 0.1s infinite;
+}
+
+/* Vignette */
+.crt-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+@keyframes scanline-flicker {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+/* ── Moving Scanline Bar ── */
+.scanline-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0, 255, 65, 0.08),
+    transparent
+  );
+  z-index: var(--z-scanline);
+  pointer-events: none;
+  animation: scanline-move 4s linear infinite;
+}
+
+@keyframes scanline-move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ── Glitch Canvas ── */
+#glitch-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+/* ── Phase Container ── */
+.phase {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s var(--ease-out), visibility 0s 0.8s;
+  z-index: var(--z-base);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 5vmin;
+  padding-bottom: 80px; /* HUD clearance */
+}
+
+.phase > div {
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.phase.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s var(--ease-out), visibility 0s 0s;
+}
+
+/* ── HUD Status Bar ── */
+.hud {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-sm) var(--sp-xl);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+  border-top: 1px solid var(--col-border);
+  z-index: var(--z-overlay);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.6s var(--ease-out);
+}
+
+.hud.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hud__section {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+}
+
+.hud__label {
+  color: var(--col-text-dim);
+}
+
+.hud__value {
+  color: var(--col-neon-green);
+  text-shadow: var(--text-glow-green);
+  font-weight: 700;
+}
+
+.hud__value--warning {
+  color: var(--col-neon-amber);
+  text-shadow: var(--text-glow-red);
+}
+
+.hud__value--danger {
+  color: var(--col-neon-red);
+  text-shadow: var(--text-glow-red);
+  animation: pulse-danger 1s ease infinite;
+}
+
+@keyframes pulse-danger {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Signal Strength Bar ── */
+.signal-bar {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  height: 14px;
+}
+
+.signal-bar__segment {
+  width: 4px;
+  background: var(--col-border);
+  border-radius: 1px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.signal-bar__segment:nth-child(1) { height: 4px; }
+.signal-bar__segment:nth-child(2) { height: 6px; }
+.signal-bar__segment:nth-child(3) { height: 8px; }
+.signal-bar__segment:nth-child(4) { height: 10px; }
+.signal-bar__segment:nth-child(5) { height: 12px; }
+.signal-bar__segment:nth-child(6) { height: 14px; }
+
+.signal-bar__segment.active {
+  background: var(--col-neon-green);
+  box-shadow: 0 0 6px rgba(0, 255, 65, 0.6);
+}
+
+.signal-bar__segment.active.warning {
+  background: var(--col-neon-amber);
+  box-shadow: 0 0 6px rgba(255, 165, 0, 0.6);
+}
+
+/* ── Data Integrity Progress ── */
+.integrity-bar {
+  width: 120px;
+  height: 6px;
+  background: var(--col-border);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.integrity-bar__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--col-neon-red), var(--col-neon-amber), var(--col-neon-green));
+  border-radius: 3px;
+  transition: width 0.6s var(--ease-out);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+
+/* ── Phase Indicator ── */
+.phase-indicator {
+  display: flex;
+  gap: var(--sp-xs);
+  align-items: center;
+}
+
+.phase-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--col-border);
+  transition: all 0.3s;
+}
+
+.phase-dot.completed {
+  background: var(--col-neon-green);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+.phase-dot.current {
+  background: var(--col-neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+  animation: pulse-dot 1.5s ease infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+/* ── Common Glitch Text ── */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  color: var(--col-neon-red);
+  animation: glitch-shift-1 3s infinite linear alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch-text::after {
+  color: var(--col-neon-cyan);
+  animation: glitch-shift-2 2s infinite linear alternate-reverse;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch-shift-1 {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, 2px); }
+  80% { transform: translate(3px, 0); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-shift-2 {
+  0% { transform: translate(0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-3px, 1px); }
+  75% { transform: translate(1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.text-green { color: var(--col-neon-green); text-shadow: var(--text-glow-green); }
+.text-cyan { color: var(--col-neon-cyan); text-shadow: var(--text-glow-cyan); }
+.text-red { color: var(--col-neon-red); text-shadow: var(--text-glow-red); }
+.text-dim { color: var(--col-text-dim); }

@@ -1,0 +1,298 @@
+/* ========================================
+   LOST SIGNAL — Phase 1: Signal Scanner
+   ======================================== */
+
+.phase-scanner {
+  background: var(--col-bg-dark);
+}
+
+.scanner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+}
+
+.scanner-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--col-neon-cyan);
+  text-shadow: var(--text-glow-cyan);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.scanner-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--col-text-dim);
+  text-align: center;
+  margin-top: var(--sp-xs);
+  letter-spacing: 1px;
+}
+
+/* ── Radar Display ── */
+.radar {
+  position: relative;
+  width: min(320px, 65vw);
+  height: min(320px, 65vw);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 240, 255, 0.03) 0%,
+    rgba(0, 0, 0, 0.9) 70%
+  );
+  border: 2px solid var(--col-border-glow);
+  box-shadow: 
+    var(--glow-cyan),
+    inset 0 0 40px rgba(0, 240, 255, 0.03);
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+/* Radar grid lines */
+.radar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    /* Concentric circles */
+    radial-gradient(circle, transparent 24%, var(--col-border) 24.5%, transparent 25%),
+    radial-gradient(circle, transparent 49%, var(--col-border) 49.5%, transparent 50%),
+    radial-gradient(circle, transparent 74%, var(--col-border) 74.5%, transparent 75%),
+    /* Cross lines */
+    linear-gradient(0deg, transparent 49.5%, var(--col-border) 49.5%, var(--col-border) 50.5%, transparent 50.5%),
+    linear-gradient(90deg, transparent 49.5%, var(--col-border) 49.5%, var(--col-border) 50.5%, transparent 50.5%);
+  border-radius: 50%;
+}
+
+/* Sweep line */
+.radar__sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--col-neon-cyan), transparent);
+  animation: radar-sweep 3s linear infinite;
+  z-index: 2;
+}
+
+.radar__sweep::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(0, 240, 255, 0.15),
+    transparent 40deg
+  );
+  transform-origin: 0% 50%;
+  border-radius: 50%;
+}
+
+@keyframes radar-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Signal blips */
+.radar__blip {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--col-neon-cyan);
+  box-shadow: var(--glow-cyan);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s var(--ease-out);
+  z-index: 3;
+}
+
+.radar__blip.detected {
+  opacity: 1;
+  transform: scale(1);
+  animation: blip-pulse 1.5s ease infinite;
+}
+
+.radar__blip.locked {
+  background: var(--col-neon-green);
+  box-shadow: var(--glow-green);
+  width: 14px;
+  height: 14px;
+  margin-left: -3px;
+  margin-top: -3px;
+  animation: blip-lock 0.5s ease;
+}
+
+@keyframes blip-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+@keyframes blip-lock {
+  0% { transform: scale(3); opacity: 0; }
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Interaction hint ring */
+.radar__hint-ring {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px dashed var(--col-neon-cyan);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: hint-expand 2s ease infinite;
+}
+
+@keyframes hint-expand {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+/* Scanner status text */
+.scanner-status {
+  font-size: var(--fs-sm);
+  color: var(--col-text-dim);
+  text-align: center;
+  letter-spacing: 1px;
+  min-height: 20px;
+}
+
+.scanner-status.found {
+  color: var(--col-neon-green);
+  text-shadow: var(--text-glow-green);
+}
+
+/* Fragment Preview (appears after signal lock) */
+.scanner-fragment {
+  width: min(400px, 85vw);
+  aspect-ratio: 16/9;
+  background: var(--col-surface);
+  border: 1px solid var(--col-border-glow);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s var(--ease-out);
+}
+
+.scanner-fragment.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scanner-fragment__static {
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.02) 2px,
+      rgba(255,255,255,0.02) 4px
+    );
+  animation: static-noise 0.15s steps(5) infinite;
+}
+
+@keyframes static-noise {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 3px); }
+  40% { transform: translate(3px, -1px); }
+  60% { transform: translate(-1px, -3px); }
+  80% { transform: translate(2px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.scanner-fragment__label {
+  position: absolute;
+  top: var(--sp-sm);
+  right: var(--sp-sm);
+  font-size: var(--fs-xs);
+  color: var(--col-neon-red);
+  text-shadow: var(--text-glow-red);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.6);
+  padding: 2px 8px;
+}
+
+/* Scanner progress */
+.scanner-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  width: min(400px, 90vw);
+}
+
+.scanner-progress__label {
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  min-width: 80px;
+}
+
+.scanner-progress__bar {
+  flex: 1;
+  height: 3px;
+  background: var(--col-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.scanner-progress__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--col-neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+
+.scanner-progress__value {
+  font-size: var(--fs-xs);
+  color: var(--col-neon-cyan);
+  text-shadow: var(--text-glow-cyan);
+  min-width: 35px;
+  text-align: right;
+}
+
+/* Continue button */
+.btn-continue {
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--col-neon-green);
+  text-shadow: var(--text-glow-green);
+  padding: var(--sp-sm) var(--sp-xl);
+  border: 1px solid var(--col-neon-green);
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.btn-continue.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: pulse-subtle 2s ease infinite;
+}
+
+.btn-continue:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: var(--glow-green);
+}

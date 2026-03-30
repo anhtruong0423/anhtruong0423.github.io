@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon 🍋 | Thế Giới Chanh Vàng Rực Rỡ</title>
+    <meta name="description" content="Lemon - Thương hiệu chanh vàng. Quần áo, nước uống, phụ kiện & decor hình chanh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== PRELOADER: Dao cắt chanh ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__lemon-wrap">
+            <div class="preloader__half preloader__half--left"></div>
+            <div class="preloader__knife"></div>
+            <div class="preloader__half preloader__half--right"></div>
+        </div>
+        <p class="preloader__text">Đang vắt chanh...</p>
+    </div>
+
+    <!-- Scroll Up -->
+    <a href="#home" class="scroll-up" id="scroll-up"><i class='bx bx-chevron-up'></i></a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="logo">🍋 <span>Lemon</span></a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active-link">Trang chủ</a></li>
+                    <li><a href="#products" class="nav__link">Sản phẩm</a></li>
+                    <li><a href="#about" class="nav__link">Về chúng tôi</a></li>
+                    <li><a href="#gallery" class="nav__link">Bộ sưu tập</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class='bx bx-x'></i></div>
+            </div>
+            <div class="nav__actions">
+                <button class="nav__cart"><i class='bx bx-shopping-bag'></i><span class="cart-count" id="cart-count">0</span></button>
+                <div class="nav__toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================
+             HERO: Full-bleed vàng chanh dạng chia đôi
+        ========================================= -->
+        <section class="hero" id="home">
+            <!-- Nửa trái: Nội dung trên nền vàng chanh đậm -->
+            <div class="hero__left">
+                <div class="hero__content">
+                    <div class="hero__tag">🍋 Fresh since 2024</div>
+                    <h1 class="hero__title">
+                        SQUEEZE<br>
+                        <span class="hero__title--outline">THE DAY</span><br>
+                        <span class="hero__title--script">with Lemon</span>
+                    </h1>
+                    <p class="hero__desc">Thời trang • Nước uống • Decor — Tất cả đều mang hương vị chanh vàng tươi mát nhất.</p>
+                    <div class="hero__cta">
+                        <a href="#products" class="btn btn--dark">Mua sắm ngay <i class='bx bx-right-arrow-alt'></i></a>
+                        <a href="#about" class="btn btn--ghost">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nửa phải: Hình ảnh chanh to bự, hiệu ứng cắt -->
+            <div class="hero__right">
+                <div class="hero__img-stack">
+                    <!-- Lát chanh lớn bằng hình thật -->
+                    <div class="hero__lemon-big">
+                        <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&q=80&w=900&h=900" alt="Chanh vàng tươi" class="hero__lemon-img">
+                    </div>
+                    <!-- Phần cắt (slice overlay) -->
+                    <div class="hero__slice-fx">
+                        <div class="hero__slice-line"></div>
+                    </div>
+                    <!-- Mini product cards bay bay -->
+                    <div class="hero__mini hero__mini--1">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=150" alt="">
+                        <div><strong>Áo Thun Lemon</strong><span>189K</span></div>
+                    </div>
+                    <div class="hero__mini hero__mini--2">
+                        <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&q=80&w=150" alt="">
+                        <div><strong>Lemonade</strong><span>35K</span></div>
+                    </div>
+                </div>
+                <!-- Juice splatter hình giọt -->
+                <div class="juice juice--1"></div>
+                <div class="juice juice--2"></div>
+                <div class="juice juice--3"></div>
+            </div>
+
+            <!-- Scrolldown indicator -->
+            <div class="hero__scroll">
+                <span>Cuộn xuống</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ===== MARQUEE CHẠY CHỮ ===== -->
+        <div class="marquee">
+            <div class="marquee__track">
+                <span>CHANH VÀNG ✦</span><span>TƯƠI MÁT ✦</span><span>THỜI TRANG ✦</span><span>NƯỚC UỐNG ✦</span><span>DECOR ✦</span><span>PHONG CÁCH ✦</span><span>ORGANIC ✦</span><span>HANDMADE ✦</span>
+                <span>CHANH VÀNG ✦</span><span>TƯƠI MÁT ✦</span><span>THỜI TRANG ✦</span><span>NƯỚC UỐNG ✦</span><span>DECOR ✦</span><span>PHONG CÁCH ✦</span><span>ORGANIC ✦</span><span>HANDMADE ✦</span>
+            </div>
+        </div>
+
+        <!-- ===== CATEGORIES: Bento Grid ===== -->
+        <section class="bento section" id="categories">
+            <div class="container">
+                <h2 class="sec-title">Khám Phá <span>Lemon</span></h2>
+                <div class="bento__grid">
+                    <article class="bento__card bento__card--hero">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&q=80&w=900&h=700" alt="Fashion">
+                        <div class="bento__overlay">
+                            <span class="bento__num">01</span>
+                            <h3>Thời Trang Lemon</h3>
+                            <p>120+ sản phẩm — Áo, quần, phụ kiện hình chanh</p>
+                            <a href="#" class="bento__link">Xem ngay →</a>
+                        </div>
+                    </article>
+                    <article class="bento__card">
+                        <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&q=80&w=600&h=400" alt="Drinks">
+                        <div class="bento__overlay">
+                            <span class="bento__num">02</span>
+                            <h3>Nước Uống Chanh</h3>
+                            <p>45+ loại lemonade</p>
+                            <a href="#" class="bento__link">Xem ngay →</a>
+                        </div>
+                    </article>
+                    <article class="bento__card">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&q=80&w=600&h=400" alt="Decor">
+                        <div class="bento__overlay">
+                            <span class="bento__num">03</span>
+                            <h3>Decor & Phụ Kiện</h3>
+                            <p>80+ mẫu decor chanh</p>
+                            <a href="#" class="bento__link">Xem ngay →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTS: Horizontal scroll trên mobile ===== -->
+        <section class="products section" id="products">
+            <div class="container">
+                <div class="products__header">
+                    <h2 class="sec-title sec-title--left">Best<br><span>Sellers</span> 🍋</h2>
+                    <div class="products__filter">
+                        <button class="fbtn active" data-filter="all">Tất cả</button>
+                        <button class="fbtn" data-filter="fashion">Thời trang</button>
+                        <button class="fbtn" data-filter="drink">Nước uống</button>
+                        <button class="fbtn" data-filter="decor">Decor</button>
+                    </div>
+                </div>
+                <div class="products__grid">
+                    <!-- P1 -->
+                    <article class="pcard" data-category="fashion">
+                        <div class="pcard__img-wrap">
+                            <span class="pcard__badge pcard__badge--hot">HOT 🔥</span>
+                            <button class="pcard__heart"><i class='bx bx-heart'></i></button>
+                            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=500&h=600" alt="Áo Thun">
+                            <div class="pcard__actions">
+                                <button class="pcard__add"><i class='bx bx-cart-add'></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pcard__info">
+                            <span class="pcard__cat">Thời trang</span>
+                            <h3>Áo Thun Lemon Vibes</h3>
+                            <div class="pcard__bottom">
+                                <div class="pcard__prices"><strong>189.000đ</strong><del>250.000đ</del></div>
+                                <div class="pcard__stars">⭐ 4.9</div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- P2 -->
+                    <article class="pcard" data-category="drink">
+                        <div class="pcard__img-wrap">
+                            <span class="pcard__badge pcard__badge--new">NEW</span>
+                            <button class="pcard__heart"><i class='bx bx-heart'></i></button>
+                            <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&q=80&w=500&h=600" alt="Lemonade">
+                            <div class="pcard__actions">
+                                <button class="pcard__add"><i class='bx bx-cart-add'></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pcard__info">
+                            <span class="pcard__cat">Nước uống</span>
+                            <h3>Lemonade Sparkling</h3>
+                            <div class="pcard__bottom">
+                                <div class="pcard__prices"><strong>35.000đ</strong></div>
+                                <div class="pcard__stars">⭐ 4.8</div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- P3 -->
+                    <article class="pcard" data-category="decor">
+                        <div class="pcard__img-wrap">
+                            <button class="pcard__heart"><i class='bx bx-heart'></i></button>
+                            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&q=80&w=500&h=600" alt="Đèn ngủ">
+                            <div class="pcard__actions">
+                                <button class="pcard__add"><i class='bx bx-cart-add'></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pcard__info">
+                            <span class="pcard__cat">Decor</span>
+                            <h3>Đèn Ngủ Lemon Dream</h3>
+                            <div class="pcard__bottom">
+                                <div class="pcard__prices"><strong>120.000đ</strong></div>
+                                <div class="pcard__stars">⭐ 4.6</div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- P4 -->
+                    <article class="pcard" data-category="fashion">
+                        <div class="pcard__img-wrap">
+                            <span class="pcard__badge pcard__badge--sale">-40%</span>
+                            <button class="pcard__heart"><i class='bx bx-heart'></i></button>
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=500&h=600" alt="Hoodie">
+                            <div class="pcard__actions">
+                                <button class="pcard__add"><i class='bx bx-cart-add'></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pcard__info">
+                            <span class="pcard__cat">Thời trang</span>
+                            <h3>Hoodie Citrus Fresh</h3>
+                            <div class="pcard__bottom">
+                                <div class="pcard__prices"><strong>299.000đ</strong> <del>499.000đ</del></div>
+                                <div class="pcard__stars">⭐ 5.0</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FLASH SALE fullbleed vàng chanh ===== -->
+        <section class="flash">
+            <div class="flash__bg-text">LEMON</div>
+            <div class="container flash__inner">
+                <div class="flash__left">
+                    <span class="flash__tag">⚡ Flash Sale</span>
+                    <h2 class="flash__title">GIẢM<br>ĐẾN<br><span>50%</span></h2>
+                    <p>Bộ sưu tập mùa hè chanh sả — chỉ trong tuần này!</p>
+                    <div class="flash__timer">
+                        <div class="tbox"><span id="t-h">23</span><small>Giờ</small></div>
+                        <div class="tsep">:</div>
+                        <div class="tbox"><span id="t-m">59</span><small>Phút</small></div>
+                        <div class="tsep">:</div>
+                        <div class="tbox"><span id="t-s">45</span><small>Giây</small></div>
+                    </div>
+                    <a href="#products" class="btn btn--dark">Mua Ngay 🛒</a>
+                </div>
+                <div class="flash__right">
+                    <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&q=80&w=600&h=700" alt="Chanh" class="flash__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT: zigzag layout ===== -->
+        <section class="about section" id="about">
+            <div class="container about__wrap">
+                <div class="about__media">
+                    <div class="about__img-box">
+                        <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&q=80&w=600&h=750" alt="Chanh">
+                    </div>
+                    <div class="about__badge-float">
+                        <strong>10K+</strong>
+                        <span>Khách hàng<br>hài lòng</span>
+                    </div>
+                </div>
+                <div class="about__text">
+                    <span class="about__tag">🍋 Câu chuyện</span>
+                    <h2 class="sec-title sec-title--left">Khi Chanh Vàng<br>Trở Thành<br><span>Nghệ Thuật</span></h2>
+                    <p>Lemon ra đời từ tình yêu đơn giản với trái chanh — biểu tượng của sự tươi mát, tích cực và tràn đầy năng lượng. Mỗi sản phẩm mang họa tiết chanh đều có thể làm sáng bừng ngày mới.</p>
+                    <div class="about__perks">
+                        <div class="aperk"><span>🌿</span><div><strong>100% Organic</strong><p>Nguyên liệu tự nhiên</p></div></div>
+                        <div class="aperk"><span>🎨</span><div><strong>Thiết kế độc quyền</strong><p>Mỗi sản phẩm là tác phẩm</p></div></div>
+                        <div class="aperk"><span>📦</span><div><strong>Freeship từ 199K</strong><p>Giao nhanh, gói xinh</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY ===== -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <h2 class="sec-title">#LemonVN <span>trên Instagram</span></h2>
+            </div>
+            <div class="gallery__strip">
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&q=80&w=400&h=400" alt=""><div class="gallery__ov"><i class='bx bxl-instagram'></i></div></div>
+            </div>
+        </section>
+
+        <!-- ===== NEWSLETTER ===== -->
+        <section class="nl section">
+            <div class="nl__box container">
+                <h2 class="sec-title sec-title--white">Nhận mã giảm 15% 🎁</h2>
+                <p>Đăng ký bản tin để cập nhật BST mới và ưu đãi sốc từ Lemon!</p>
+                <form class="nl__form" onsubmit="return false;">
+                    <input type="email" placeholder="email@lemones.vn">
+                    <button class="btn btn--dark">Đăng Ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ft">
+        <div class="container ft__grid">
+            <div class="ft__col">
+                <a href="#" class="ft__logo">🍋 Lemon</a>
+                <p>Thương hiệu lấy cảm hứng từ chanh vàng.<br>Tươi mới — Năng động — Rực rỡ.</p>
+                <div class="ft__social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+            <div class="ft__col"><h4>Mua sắm</h4><ul><li><a href="#">Thời trang</a></li><li><a href="#">Nước uống</a></li><li><a href="#">Decor</a></li><li><a href="#">Combo</a></li></ul></div>
+            <div class="ft__col"><h4>Hỗ trợ</h4><ul><li><a href="#">Đổi trả</a></li><li><a href="#">Mua hàng</a></li><li><a href="#">FAQ</a></li></ul></div>
+            <div class="ft__col"><h4>Liên hệ</h4><ul class="ft__contact"><li><i class='bx bx-map'></i> TP. HCM</li><li><i class='bx bx-phone'></i> 0909 LEMON</li><li><i class='bx bx-envelope'></i> hello@lemones.vn</li></ul></div>
+        </div>
+        <div class="ft__bottom"><p>© 2024 Lemon 🍋 Designed with 💛</p></div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>

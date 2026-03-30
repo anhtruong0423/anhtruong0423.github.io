@@ -1,0 +1,272 @@
+/* ========================================
+   LOST SIGNAL — Phase 5: The Revelation
+   ======================================== */
+
+.phase-reveal {
+  background: var(--col-bg-dark);
+}
+
+.reveal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-xl);
+  text-align: center;
+  max-width: 800px;
+  padding: var(--sp-2xl);
+}
+
+/* ── Reconstructed Video Player ── */
+.video-player {
+  width: min(640px, 90vw);
+  aspect-ratio: 16/9;
+  background: var(--col-bg-dark);
+  border: 2px solid var(--col-border-glow);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s var(--ease-out);
+}
+
+.video-player.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.video-player__canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.video-player__status {
+  position: absolute;
+  top: var(--sp-sm);
+  left: var(--sp-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  font-size: var(--fs-xs);
+  color: var(--col-neon-green);
+  text-shadow: var(--text-glow-green);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.video-player__rec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--col-neon-red);
+  box-shadow: 0 0 6px rgba(255, 0, 64, 0.8);
+  animation: rec-blink 1s ease infinite;
+}
+
+@keyframes rec-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.video-player__timecode {
+  position: absolute;
+  bottom: var(--sp-sm);
+  right: var(--sp-sm);
+  font-size: var(--fs-xs);
+  color: var(--col-text-dim);
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+
+/* ── Reveal Message ── */
+.reveal-message {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s var(--ease-out);
+}
+
+.reveal-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-message__pre {
+  font-size: var(--fs-sm);
+  color: var(--col-text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-md);
+}
+
+.reveal-message__main {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.4;
+  background: linear-gradient(135deg, var(--col-neon-cyan), var(--col-neon-green), var(--col-neon-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  animation: gradient-shift 4s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.reveal-message__sub {
+  font-size: var(--fs-base);
+  color: var(--col-text);
+  margin-top: var(--sp-lg);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Typewriter effect for reveal ── */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--col-neon-green);
+  animation: 
+    typing 2s steps(30) 1s forwards,
+    blink-caret 0.75s step-end infinite;
+  width: 0;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--col-neon-green); }
+}
+
+/* ── Credits Roll ── */
+.reveal-credits {
+  margin-top: var(--sp-3xl);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s var(--ease-out) 2s;
+}
+
+.reveal-credits.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-credits__line {
+  font-size: var(--fs-sm);
+  color: var(--col-text-dim);
+  margin-bottom: var(--sp-xs);
+  letter-spacing: 1px;
+}
+
+.reveal-credits__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--col-text);
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-lg);
+}
+
+.reveal-credits__divider {
+  width: 40px;
+  height: 1px;
+  background: var(--col-border-glow);
+  margin: var(--sp-lg) auto;
+}
+
+/* ── Return Button ── */
+.btn-home {
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--col-text-dim);
+  padding: var(--sp-sm) var(--sp-xl);
+  border: 1px solid var(--col-border);
+  transition: all 0.3s;
+  margin-top: var(--sp-2xl);
+  opacity: 0;
+  animation: fade-in 0.5s ease 4s forwards;
+}
+
+.btn-home:hover {
+  color: var(--col-neon-cyan);
+  border-color: var(--col-neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* ── Dissolve Particles ── */
+.dissolve-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+}
+
+.dissolve-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--col-neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 255, 65, 0.6);
+  animation: particle-float 3s ease-out forwards;
+}
+
+@keyframes particle-float {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx, 50px), var(--dy, -100px)) scale(0);
+  }
+}
+
+/* ── Signal Restored Banner ── */
+.signal-restored {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--z-modal);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.signal-restored.visible {
+  animation: signal-restore-show 3s ease forwards;
+}
+
+@keyframes signal-restore-show {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  30% { transform: translate(-50%, -50%) scale(1); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+
+.signal-restored__text {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  color: var(--col-neon-green);
+  text-shadow: 
+    var(--text-glow-green),
+    0 0 60px rgba(0, 255, 65, 0.3);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}

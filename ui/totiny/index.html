@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totiny | Văn Phòng Phẩm Mèo Cute</title>
+    <meta name="description"
+        content="Totiny - Cửa hàng văn phòng phẩm chủ đề mèo siêu dễ thương. Sổ tay, bút, sticker và phụ kiện đáng yêu cho người yêu mèo.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Paw Prints (Decorative) -->
+    <div class="floating-paws" aria-hidden="true">
+        <span class="paw paw-1">🐾</span>
+        <span class="paw paw-2">🐾</span>
+        <span class="paw paw-3">🐾</span>
+        <span class="paw paw-4">🐾</span>
+        <span class="paw paw-5">🐾</span>
+    </div>
+
+    <!-- Scroll Up -->
+    <a href="#home" class="scroll-up" id="scroll-up">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-icon"></span>
+                <span>Totiny</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-smile'></i> Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#categories" class="nav__link">
+                            <i class='bx bx-category'></i> Danh mục
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">
+                            <i class='bx bx-star'></i> Nổi bật
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-heart'></i> Về Totiny
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="nav__shop-badge">2</span>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu-alt-right'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <div class="home__subtitle">
+                        <span class="home__subtitle-icon"></span> Meo meo chào bạn!
+                    </div>
+                    <h1 class="home__title">
+                        Văn Phòng Phẩm<br>
+                        <span class="home__title-highlight">Mèo Siêu Xinh</span><br>
+                        Cho Bạn 🐾
+                    </h1>
+                    <p class="home__description">
+                        Totiny mang đến bộ sưu tập văn phòng phẩm chủ đề mèo dễ thương nhất,
+                        giúp góc học tập và làm việc của bạn luôn tràn ngập niềm vui nhỏ xinh.
+                    </p>
+
+                    <div class="home__btns">
+                        <a href="#products" class="button button--pink">
+                            Khám Phá Ngay <i class='bx bx-right-arrow-alt button__icon'></i>
+                        </a>
+                        <a href="#categories" class="button button--outline">
+                            Xem Danh Mục
+                        </a>
+                    </div>
+
+                    <div class="home__stats">
+                        <div class="home__stat">
+                            <span class="home__stat-number">200+</span>
+                            <span class="home__stat-label">Sản phẩm</span>
+                        </div>
+                        <div class="home__stat">
+                            <span class="home__stat-number">5K+</span>
+                            <span class="home__stat-label">Khách hàng</span>
+                        </div>
+                        <div class="home__stat">
+                            <span class="home__stat-number">⭐ 4.9</span>
+                            <span class="home__stat-label">Đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__images">
+                    <div class="home__img-wrapper">
+                        <div class="home__img-blob">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800&h=1000"
+                                alt="Chú mèo dễ thương - Totiny mascot" class="home__img">
+                        </div>
+                        <!-- Floating elements -->
+                        <div class="home__float home__float-1">📒</div>
+                        <div class="home__float home__float-2">✏️</div>
+                        <div class="home__float home__float-3">🎀</div>
+                        <div class="home__float home__float-4">💖</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave Divider -->
+            <div class="wave-divider">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path
+                        d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                        fill="#fdf8f4"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ===== MARQUEE (dải chạy chữ) ===== -->
+        <div class="marquee">
+            <div class="marquee__inner">
+                <span>Sổ tay mèo</span>
+                <span>Bút gel siêu mịn</span>
+                <span>Sticker dễ thương</span>
+                <span>Washi tape</span>
+                <span>Hộp bút mèo</span>
+                <span>Sổ kế hoạch</span>
+                <span>Bút chì 2B mèo</span>
+                <span>Bookmark mèo</span>
+                <!-- Duplicate -->
+                <span>Sổ tay mèo</span>
+                <span>Bút gel siêu mịn</span>
+                <span>Sticker dễ thương</span>
+                <span>Washi tape</span>
+                <span>Hộp bút mèo</span>
+                <span>Sổ kế hoạch</span>
+                <span>Bút chì 2B mèo</span>
+                <span>Bookmark mèo</span>
+            </div>
+        </div>
+
+        <!-- ===== CATEGORIES ===== -->
+        <section class="categories section" id="categories">
+            <h2 class="section__title">
+                Danh Mục Yêu Thích
+                <span class="section__title-cat"></span>
+            </h2>
+            <p class="section__subtitle">Chọn thế giới mèo mà bạn muốn khám phá</p>
+
+            <div class="categories__container container grid">
+                <article class="category__card" data-tilt>
+                    <div class="category__icon-wrapper category__icon--pink">
+                        <span class="category__emoji"></span>
+                    </div>
+                    <h3 class="category__title">Sổ Tay Mèo</h3>
+                    <p class="category__count">32 sản phẩm</p>
+                    <div class="category__paw"></div>
+                </article>
+
+                <article class="category__card" data-tilt>
+                    <div class="category__icon-wrapper category__icon--purple">
+                        <span class="category__emoji"></span>
+                    </div>
+                    <h3 class="category__title">Bút & Viết</h3>
+                    <p class="category__count">58 sản phẩm</p>
+                    <div class="category__paw">🐾</div>
+                </article>
+
+                <article class="category__card" data-tilt>
+                    <div class="category__icon-wrapper category__icon--yellow">
+                        <span class="category__emoji"></span>
+                    </div>
+                    <h3 class="category__title">Sticker & Tape</h3>
+                    <p class="category__count">45 sản phẩm</p>
+                    <div class="category__paw">🐾</div>
+                </article>
+
+                <article class="category__card" data-tilt>
+                    <div class="category__icon-wrapper category__icon--mint">
+                        <span class="category__emoji"></span>
+                    </div>
+                    <h3 class="category__title">Phụ Kiện Bàn</h3>
+                    <p class="category__count">27 sản phẩm</p>
+                    <div class="category__paw"></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED PRODUCTS ===== -->
+        <section class="products section" id="products">
+            <h2 class="section__title">
+                Sản Phẩm Hot
+                <span class="section__title-cat"></span>
+            </h2>
+            <p class="section__subtitle">Những món đồ được yêu thích nhất bởi hội cuồng mèo</p>
+
+            <div class="products__tabs">
+                <button class="products__tab active" data-filter="all">Tất cả</button>
+                <button class="products__tab" data-filter="notebook">Sổ tay</button>
+                <button class="products__tab" data-filter="pen">Bút viết</button>
+                <button class="products__tab" data-filter="accessory">Phụ kiện</button>
+            </div>
+
+            <div class="products__container container grid">
+                <!-- Product 1 -->
+                <article class="product__card" data-category="notebook">
+                    <div class="product__badge product__badge--new">MỚI</div>
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Sổ tay mèo Totiny" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Sổ tay</span>
+                        <h3 class="product__title">Sổ Mèo Mơ Màng </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>(128)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">45.000đ</span>
+                            <span class="product__price-old">60.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product__card" data-category="pen">
+                    <div class="product__badge product__badge--hot">HOT </div>
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Bút gel mèo Totiny" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Bút viết</span>
+                        <h3 class="product__title">Bút Gel Chân Mèo </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <span>(256)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">18.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product__card" data-category="accessory">
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1574844615219-cbed7b4a2bf1?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Washi tape mèo Totiny" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Phụ kiện</span>
+                        <h3 class="product__title">Washi Tape Họa Tiết Mèo </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>(89)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">32.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product__card" data-category="accessory">
+                    <div class="product__badge product__badge--sale">-30%</div>
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1629858349257-81db8aa7894a?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Hộp bút mèo Totiny" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Phụ kiện</span>
+                        <h3 class="product__title">Hộp Bút Mèo Béo </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <span>(312)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">55.000đ</span>
+                            <span class="product__price-old">79.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 5 -->
+                <article class="product__card" data-category="notebook">
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Sổ kế hoạch mèo" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Sổ tay</span>
+                        <h3 class="product__title">Sổ Kế Hoạch Mèo Con </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>(67)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">65.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="product__card" data-category="pen">
+                    <div class="product__badge product__badge--new">MỚI</div>
+                    <div class="product__wishlist">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="product__img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563842261642-a396e95221ff?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Bộ bút highlight mèo con" class="product__img">
+                    </div>
+                    <div class="product__content">
+                        <span class="product__category">Bút viết</span>
+                        <h3 class="product__title">Bộ Highlight Pastel Mèo </h3>
+                        <div class="product__rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>(145)</span>
+                        </div>
+                        <div class="product__price-row">
+                            <span class="product__price">38.000đ</span>
+                        </div>
+                        <button class="product__btn">
+                            <i class='bx bx-cart-add'></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT / WHY TOTINY ===== -->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__images">
+                    <div class="about__img-main">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&q=80&w=600&h=700"
+                            alt="Mèo Totiny dễ thương" class="about__img">
+                    </div>
+                    <div class="about__img-float">
+                        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&q=80&w=300&h=300"
+                            alt="Mèo con nhỏ xinh" class="about__img-small">
+                    </div>
+                </div>
+
+                <div class="about__data">
+                    <h2 class="section__title section__title--left">
+                        Tại sao chọn<br>
+                        <span class="text-pink">Totiny</span>?
+                    </h2>
+
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <div class="about__feature-icon"></div>
+                            <div>
+                                <h4 class="about__feature-title">100% Chủ Đề Mèo</h4>
+                                <p class="about__feature-desc">Mọi sản phẩm đều được thiết kế xoay quanh chủ đề mèo siêu
+                                    dễ thương</p>
+                            </div>
+                        </div>
+
+                        <div class="about__feature">
+                            <div class="about__feature-icon"></div>
+                            <div>
+                                <h4 class="about__feature-title">Thiết Kế Độc Quyền</h4>
+                                <p class="about__feature-desc">Hình minh họa được vẽ tay bởi các họa sĩ Việt Nam</p>
+                            </div>
+                        </div>
+
+                        <div class="about__feature">
+                            <div class="about__feature-icon"></div>
+                            <div>
+                                <h4 class="about__feature-title">Đóng Gói Siêu Xinh</h4>
+                                <p class="about__feature-desc">Hộp quà tặng kèm sticker và thiệp mèo miễn phí</p>
+                            </div>
+                        </div>
+
+                        <div class="about__feature">
+                            <div class="about__feature-icon"></div>
+                            <div>
+                                <h4 class="about__feature-title">Giao Hàng Nhanh</h4>
+                                <p class="about__feature-desc">Ship toàn quốc, đơn từ 99k được freeship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="testimonials section">
+            <h2 class="section__title">
+                Khách Hàng Nói Gì
+                <span class="section__title-cat"></span>
+            </h2>
+            <p class="section__subtitle">Những lời yêu thương gửi đến Totiny</p>
+
+            <div class="testimonials__container container grid">
+                <article class="testimonial__card">
+                    <div class="testimonial__quote">"</div>
+                    <p class="testimonial__text">Mua sổ tay mèo về vì quá xinh luôn, viết mỗi ngày mà không muốn nhàu
+                        trang nào hết! Ship nhanh, gói cẩn thận nữa 💕</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar"></div>
+                        <div>
+                            <h4 class="testimonial__name">Linh Chi</h4>
+                            <span class="testimonial__role">Sinh viên</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial__card testimonial__card--highlight">
+                    <div class="testimonial__quote">"</div>
+                    <p class="testimonial__text">Mình mua bộ bút gel mèo tặng bạn, bạn mê quá đi luôn! Bút viết mượt,
+                        mực đều và cán bút hình tai mèo siêu dễ thương 🐱</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar"></div>
+                        <div>
+                            <h4 class="testimonial__name">Minh Anh</h4>
+                            <span class="testimonial__role">Nhân viên văn phòng</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial__card">
+                    <div class="testimonial__quote">"</div>
+                    <p class="testimonial__text">Con gái mình 8 tuổi mê Totiny lắm, đòi mua hết cả bộ sưu tập mèo! Chất
+                        lượng tốt lắm mọi người ơi, giá lại hợp lý 🌟</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar"></div>
+                        <div>
+                            <h4 class="testimonial__name">Thanh Hương</h4>
+                            <span class="testimonial__role">Phụ huynh</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== NEWSLETTER ===== -->
+        <section class="newsletter section">
+            <div class="newsletter__container container">
+                <div class="newsletter__cat-deco">🐱</div>
+                <h2 class="section__title section__title--white">
+                    Nhận Voucher<br> Giảm Giá 20%
+                </h2>
+                <p class="newsletter__description">
+                    Đăng ký nhận bản tin để không bỏ lỡ các bộ sưu tập mèo mới nhất và ưu đãi sốc nhé!
+                </p>
+                <form action="" class="newsletter__form" onsubmit="return false;">
+                    <input type="email" placeholder="email-meomeo@totiny.vn" class="newsletter__input">
+                    <button class="button button--pink newsletter__btn">
+                        Đăng Ký 🐾
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container grid">
+            <!-- Col 1 -->
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <span class="footer__logo-icon"></span> Totiny
+                </a>
+                <p class="footer__description">
+                    Văn phòng phẩm chủ đề mèo dễ thương nhất Việt Nam.
+                    Mỗi món đồ là một tác phẩm nghệ thuật nhỏ xinh.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social-link" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#" class="footer__social-link" aria-label="Pinterest"><i class='bx bxl-pinterest'></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="footer__content">
+                <h3 class="footer__title">Cửa hàng</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">🐾 Sản phẩm mới</a></li>
+                    <li><a href="#" class="footer__link">🐾 Bán chạy nhất</a></li>
+                    <li><a href="#" class="footer__link">🐾 Combo tiết kiệm</a></li>
+                    <li><a href="#" class="footer__link">🐾 Quà tặng</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="footer__content">
+                <h3 class="footer__title">Hỗ trợ</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">🐾 Chính sách đổi trả</a></li>
+                    <li><a href="#" class="footer__link">🐾 Hướng dẫn mua hàng</a></li>
+                    <li><a href="#" class="footer__link">🐾 Câu hỏi thường gặp</a></li>
+                    <li><a href="#" class="footer__link">🐾 Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="footer__content">
+                <h3 class="footer__title">Liên hệ Totiny</h3>
+                <ul class="footer__links footer__contact">
+                    <li><i class='bx bx-map'></i> TP. Hồ Chí Minh, Việt Nam</li>
+                    <li><i class='bx bx-phone'></i> 0123 456 789</li>
+                    <li><i class='bx bx-envelope'></i> hello@totiny.vn</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span class="footer__copy">
+                Made with by Totiny © 2024 — Meo meo yêu bạn
+            </span>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

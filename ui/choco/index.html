@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choco Stationery 🎀 | Phụ Kiện Xinh Xắn</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll up Button -->
+    <a href="#home" class="scroll-up" id="scroll-up">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bxs-balloon'></i> <span>Choco<span style="color:var(--first-color)">.</span></span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Trang chủ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Giới thiệu</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#catalog" class="nav__link">Danh mục</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Thịnh hành</a>
+                    </li>
+                </ul>
+
+                <!-- Nút Đóng cho điện thoại -->
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Icon đổi chủ đề (Tuỳ chọn xài sau) -->
+                <!-- Icon Giỏ Hàng -->
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="nav__shop-badge">3</span>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- HERO SECTION -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <!-- Ảnh đại diện 1: Hình ảnh sổ tay, văn phòng phẩm dễ thương giả lập bằng emoji hoặc link Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1582214954714-d5f096ae5893?auto=format&fit=crop&q=80&w=800&h=800" alt="Home image" class="home__img">
+                </div>
+                
+                <div class="home__data">
+                    <h1 class="home__title">Đồ Dùng <br> Văn Phòng Phẩm <br> SIÊU XINH 🧸</h1>
+                    <p class="home__description">
+                        Biến góc học tập và làm việc của bạn trở nên ngọt ngào và đáng yêu hơn với những món phụ kiện độc quyền từ Choco Station.
+                    </p>
+                    <span class="home__price">Chỉ từ 15k</span>
+
+                    <div class="home__btns">
+                        <a href="#products" class="button button--flex">
+                            Khám Phá Ngay <i class='bx bx-right-arrow-alt button__icon'></i>
+                        </a>
+                        <!-- Nút nhỏ hơn xíu -->
+                        <a href="#about" class="button button--white button--flex">
+                            Xem video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <section class="catalog section" id="catalog">
+            <h2 class="section__title">Danh mục <br> Nổi Bật 🎀</h2>
+            
+            <div class="catalog__container container grid">
+                <!-- Cate 1 -->
+                <article class="catalog__card">
+                    <div class="catalog__shape">
+                        <i class='bx bxs-book-heart catalog__icon'></i>
+                    </div>
+                    <h3 class="catalog__title">Sổ Tay Lò Xo</h3>
+                    <p class="catalog__description">24+ mẫu xịn xò</p>
+                </article>
+                
+                <!-- Cate 2 -->
+                <article class="catalog__card">
+                    <div class="catalog__shape">
+                        <i class='bx bxs-pencil catalog__icon'></i>
+                    </div>
+                    <h3 class="catalog__title">Bút &amp; Viết</h3>
+                    <p class="catalog__description">150+ loại</p>
+                </article>
+
+                <!-- Cate 3 -->
+                <article class="catalog__card">
+                    <div class="catalog__shape">
+                        <i class='bx bxs-sticker catalog__icon'></i>
+                    </div>
+                    <h3 class="catalog__title">Hình Dán (Sticker)</h3>
+                    <p class="catalog__description">Trang trí siêu đáng yêu</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT (Tập trung điểm mạnh) -->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">Tại sao lại là <br> Choco Station?</h2>
+                    <p class="about__description">
+                        Chúng mình tin rằng những món đồ thủ công nhỏ nhắn không chỉ để dùng, mà còn mang lại năng lượng tích cực, sự vui vẻ mỗi ngày cho bạn. Đóng gói bảo vệ, ship hoả tốc đến tận nhà.
+                    </p>
+                    <a href="#footer" class="button">Tìm hiểu thêm</a>
+                </div>
+                <div class="about__img-bg">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800&h=800" alt="About" class="about__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="products section" id="products">
+            <h2 class="section__title">Sản Phẩm <br> Mới Nhất</h2>
+
+            <div class="products__container container grid">
+                <!-- Product 1 -->
+                <article class="products__card">
+                    <!-- Trái TIm -->
+                    <div class="products__circle"></div>
+                    <img src="https://images.unsplash.com/photo-1563842261642-a396e95221ff?auto=format&fit=crop&q=60&w=400" alt="" class="products__img">
+                    
+                    <h3 class="products__title">Sổ Tay Phép Thuật</h3>
+                    <span class="products__price">45.000đ</span>
+
+                    <button class="button products__button">
+                        <i class='bx bx-cart-alt'></i>
+                    </button>
+                    <!-- Badges -->
+                    <div class="products__badge new__badge">NEW</div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="products__card">
+                    <div class="products__circle"></div>
+                    <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=60&w=400" alt="" class="products__img">
+                    
+                    <h3 class="products__title">Cốc Đựng Bút Corgi</h3>
+                    <span class="products__price">80.000đ</span>
+
+                    <button class="button products__button">
+                        <i class='bx bx-cart-alt'></i>
+                    </button>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="products__card">
+                    <div class="products__circle"></div>
+                    <img src="https://images.unsplash.com/photo-1574844615219-cbed7b4a2bf1?auto=format&fit=crop&q=60&w=400" alt="" class="products__img">
+                    
+                    <h3 class="products__title">Bút Mực Gelly Roll</h3>
+                    <span class="products__price">25.000đ</span>
+
+                    <button class="button products__button">
+                        <i class='bx bx-cart-alt'></i>
+                    </button>
+                    <!-- Badges -->
+                    <div class="products__badge sale__badge">-20%</div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="products__card">
+                    <div class="products__circle"></div>
+                    <img src="https://images.unsplash.com/photo-1629858349257-81db8aa7894a?auto=format&fit=crop&q=60&w=400" alt="" class="products__img">
+                    
+                    <h3 class="products__title">Washi Tape Cuộn Lớn</h3>
+                    <span class="products__price">35.000đ</span>
+
+                    <button class="button products__button">
+                        <i class='bx bx-cart-alt'></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER / SUBSCRIBE -->
+        <section class="newsletter section">
+            <div class="newsletter__container container">
+                <h2 class="section__title">Nhận voucher mua hàng <br> Góp mặt đầu tiên</h2>
+                <p class="newsletter__description">
+                    Hãy tham gia cộng đồng hội mê Văn phòng phẩm. Cú mèo và Nhím con sẽ mang mã giảm giá tới tận tay bạn!
+                </p>
+
+                <form action="" class="newsletter__form">
+                    <input type="email" placeholder="Email của bạn..." class="newsletter__input">
+                    <button class="button">Đăng Ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer section" id="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class='bx bxs-balloon'></i> Choco.
+                </a>
+                <p class="footer__description">Tận hưởng góc học tập <br> dễ thương nhất.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social-link"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social-link"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Liên kết</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Trang chủ</a></li>
+                    <li><a href="#" class="footer__link">Sản phẩm</a></li>
+                    <li><a href="#" class="footer__link">Blog Mẹo Vặt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Hỗ trợ</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Câu hỏi thường gặp</a></li>
+                    <li><a href="#" class="footer__link">Chính sách vận chuyển</a></li>
+                    <li><a href="#" class="footer__link">Khách hàng quen</a></li>
+                </ul>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2024 Choco Station. Tất cả quyền được bảo lưu.</span>
+    </footer>
+
+    <!-- SCROLL REVEAL (Animation) -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- MAIN JS -->
+    <script src="script.js"></script>
+</body>
+</html>
