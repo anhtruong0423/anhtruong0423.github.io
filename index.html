@@ -78,16 +78,10 @@
   <!-- ============================================ -->
   <section class="section opening" id="opening">
     <div class="opening__bg" style="position: absolute; inset: 0; z-index: 0; pointer-events: auto;">
-      <!-- Vùng hiển thị 3D Model làm Background -->
-      <!-- Hãy đảm bảo file 3D được đặt đúng đường dẫn src="img/model.glb" -->
-      <model-viewer src="3d/rowboat_on_a_beach.glb" camera-controls auto-rotate auto-rotate-delay="0" disable-zoom
-        disable-pan shadow-intensity="1" alt="A 3D model of a rowboat on a beach"
-        style="width: 100%; height: 100%; background-color: transparent;">
-        <div slot="progress-bar"
-          style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif;">
-          Đang tải 3D Model (25MB)... Vui lòng đợi ⏳</div>
-      </model-viewer>
-      <div class="opening__gradient" style="position: absolute; inset: 0; pointer-events: none;"></div>
+      <!-- Background Gradient -->
+      <div class="opening__gradient"
+        style="position: absolute; inset: 0; pointer-events: none; opacity: 0.8; background: var(--gradient-sky);">
+      </div>
     </div>
     <div class="opening__content" style="position: relative; z-index: 10; pointer-events: none;">
       <div class="opening__text" style="pointer-events: auto;">
@@ -140,14 +134,14 @@
     <div class="chapter__header">
       <span class="chapter__number">01</span>
       <h2 class="chapter__title">Nhiếp Ảnh</h2>
-      <span class="chapter__genre">📸 Photography</span>
+      <span class="chapter__genre"> Photography</span>
     </div>
     <div class="chapter__content chapter__content--stacked">
       <div class="chapter__info" style="text-align: center; max-width: 800px; padding-bottom: 0;">
         <h3 class="chapter__project-name">Thế Giới Qua Ống Kính</h3>
         <div class="chapter__meta" style="justify-content: center;">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">🎬 Photographer</span>
+          <span class="chapter__year">2026</span>
+          <span class="chapter__role">Photographer</span>
         </div>
         <p class="chapter__synopsis">
           Biến những khoảnh khắc đời thường thành những bức ảnh đáng nhớ. Mình thích
@@ -203,7 +197,7 @@
       </div>
     </div>
     <div class="chapter__annotation" aria-hidden="true" style="z-index: 10;">
-      <span class="annotation-text">đam mê từ bé 🎥</span>
+      <span class="annotation-text">đam mê từ bé </span>
     </div>
   </section>
 
@@ -214,7 +208,7 @@
     <div class="chapter__header">
       <span class="chapter__number">02</span>
       <h2 class="chapter__title">Sản Phẩm Truyền Thông Số</h2>
-      <span class="chapter__genre">🎞️ Short Film & Media</span>
+      <span class="chapter__genre">Short Film & Media</span>
     </div>
     <div class="chapter__content">
       <div class="polaroid polaroid--tilt-left video-thumbnail"
@@ -225,13 +219,13 @@
           <img src="img/phim ngắn/thumnails.png" alt="Khi người nhẹ dạ gặp kẻ nặng lòng"
             style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <p class="polaroid__caption">Dự án phim ngắn đầu tay 🎬</p>
+        <p class="polaroid__caption">Dự án phim ngắn đầu tay </p>
       </div>
       <div class="chapter__info">
         <h3 class="chapter__project-name">Khi người nhẹ dạ gặp kẻ nặng lòng</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2025</span>
-          <span class="chapter__role">🎬 Kịch bản / Diễn viên</span>
+          <span class="chapter__year"> 2025</span>
+          <span class="chapter__role"> Kịch bản / Diễn viên</span>
         </div>
         <p class="chapter__synopsis">
           Một thước phim ngắn khám phá những góc khuất của cảm xúc — sự dằn vặt giữa một
@@ -251,8 +245,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Ký sự: Theo Bước Chân Phật</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 202</span>
-          <span class="chapter__role">🎬 Kịch bản / Host</span>
+          <span class="chapter__year"> 202</span>
+          <span class="chapter__role"> Kịch bản / Host</span>
         </div>
         <p class="chapter__synopsis">
           Thước phim tài liệu ghi lại những khoảnh khắc tĩnh lặng và ý nghĩa sâu sắc trên hành trình tìm về bình yên.
@@ -273,7 +267,7 @@
           <img src="img/phim ngắn/ký sự.png" alt="Ký sự: Theo Bước Chân Phật"
             style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <p class="polaroid__caption">Ký sự tài liệu 🎥</p>
+        <p class="polaroid__caption">Ký sự tài liệu </p>
       </div>
 
       <!-- Video 3: TVC human ear -->
@@ -285,13 +279,13 @@
           <img src="img/phim ngắn/humanear.png" alt="TVC human ear"
             style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <p class="polaroid__caption">TVC Quảng cáo 🎬</p>
+        <p class="polaroid__caption">TVC Quảng cáo </p>
       </div>
       <div class="chapter__info">
         <h3 class="chapter__project-name">TVC Human Ear</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">🎬 3D Artist</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> 3D Artist</span>
         </div>
         <p class="chapter__synopsis">
           Dự án TVC quảng cáo được thực hiện hoàn toàn bằng đồ họa 3D. Từ việc dựng mô hình, thiết lập ánh sáng
@@ -310,8 +304,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Thở</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">🎬 Kịch bản</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> Kịch bản</span>
         </div>
         <p class="chapter__synopsis">
           Dự án phim ngắn "Thở" mang một nhịp điệu nhẹ nhàng như chính hơi thở của cảm xúc. Góc quay đầy thi vị và những
@@ -332,12 +326,12 @@
           <!-- Ảnh cover từ thumbnail thư mục -->
           <img src="img/phim ngắn/tho.png" alt="Thở" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <p class="polaroid__caption">Phim ngắn Thở ☁️</p>
+        <p class="polaroid__caption">Phim ngắn Thở </p>
       </div>
 
     </div>
     <div class="chapter__annotation" aria-hidden="true">
-      <span class="annotation-text">scene yêu thích! 💕</span>
+      <span class="annotation-text">scene yêu thích! </span>
     </div>
   </section>
 
@@ -350,7 +344,7 @@
     <div class="chapter__header">
       <span class="chapter__number">03</span>
       <h2 class="chapter__title">Sắc Màu</h2>
-      <span class="chapter__genre">🎨 Graphic Design</span>
+      <span class="chapter__genre"> Graphic Design</span>
     </div>
     <div class="chapter__content">
 
@@ -365,8 +359,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Frumi — Thiết kế bao bì</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2025</span>
-          <span class="chapter__role">🎨 Designer</span>
+          <span class="chapter__year"> 2025</span>
+          <span class="chapter__role"> Designer</span>
         </div>
         <p class="chapter__synopsis">
           Dự án xây dựng bộ bao bì sản phẩm cho Sữa Frumi — một thương hiệu trà trẻ trung, hiện đại.
@@ -429,8 +423,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Almint — Bộ Nhận Diện Sản Phẩm</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2025</span>
-          <span class="chapter__role">🎬 Product Designer</span>
+          <span class="chapter__year">2025</span>
+          <span class="chapter__role">Product Designer</span>
         </div>
         <p class="chapter__synopsis">
           Dự án thiết kế trọn bộ sản phẩm cho thương hiệu Almint — từ mascot đáng yêu,
@@ -449,7 +443,7 @@
           <img src="img/design/Almint/mascot (1).png" alt="Almint Mascot Design"
             style="width: 100%; height: 100%; object-fit: contain; background: linear-gradient(135deg, #e8f8ee, #d0f0e0);">
         </div>
-        <p class="polaroid__caption">Almint — Sản phẩm tươi mát 🌿</p>
+        <p class="polaroid__caption">Almint — Sản phẩm tươi mát </p>
       </div>
 
       <!-- Almint Gallery Scroll -->
@@ -478,7 +472,7 @@
 
     </div>
     <div class="chapter__annotation" aria-hidden="true">
-      <span class="annotation-text">sáng tạo mỗi ngày ✏️</span>
+      <span class="annotation-text">sáng tạo mỗi ngày </span>
     </div>
   </section>
 
@@ -504,11 +498,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/1.2.jpg" alt="Ảnh qua AI 1">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/1.1.png" alt="Ảnh gốc 1">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -523,11 +517,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/2.2.jpg" alt="Ảnh qua AI 2">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/2.1.png" alt="Ảnh gốc 2">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -542,11 +536,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/3.2.jpg" alt="Ảnh qua AI 3">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/3.1.png" alt="Ảnh gốc 3">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -561,11 +555,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/4.2.jpg" alt="Ảnh qua AI 4">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/4.1.png" alt="Ảnh gốc 4">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -580,11 +574,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/5.2.jpg" alt="Ảnh qua AI 5">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/5.1.jpg" alt="Ảnh gốc 5">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -599,11 +593,11 @@
           <div class="ai-compare__wrapper">
             <div class="ai-compare__img ai-compare__img--after">
               <img src="img/AI/6.2.jpg" alt="Ảnh qua AI 6">
-              <span class="ai-compare__label ai-compare__label--after">✨ AI</span>
+              <span class="ai-compare__label ai-compare__label--after"> AI</span>
             </div>
             <div class="ai-compare__img ai-compare__img--before">
               <img src="img/AI/6.1.jpg" alt="Ảnh gốc 6">
-              <span class="ai-compare__label ai-compare__label--before">📷 Gốc</span>
+              <span class="ai-compare__label ai-compare__label--before"> Gốc</span>
             </div>
             <div class="ai-compare__slider">
               <div class="ai-compare__handle">
@@ -692,8 +686,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Totiny Stationery</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">💻 Cute/Kawaii UI</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> Cute/Kawaii UI</span>
         </div>
         <p class="chapter__synopsis">
           Trang đích dễ thương dành riêng cho hội yêu mèo. Giao diện ngập tràn màu sắc pastel,
@@ -706,8 +700,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Lemon Brand</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">💻 Vibrant & Fresh UI</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> Vibrant & Fresh UI</span>
         </div>
         <p class="chapter__synopsis">
           Thiết kế rực rỡ mang đầy năng lượng tích cực cho một thương hiệu lấy cảm hứng từ quả chanh vàng.
@@ -736,8 +730,8 @@
       <div class="chapter__info">
         <h3 class="chapter__project-name">Choco Stationery</h3>
         <div class="chapter__meta">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">💻 Soft & Delicate UI</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> Soft & Delicate UI</span>
         </div>
         <p class="chapter__synopsis">
           Giao diện cửa hàng phụ kiện ngọt ngào, tinh tế. Tập trung vào trải nghiệm
@@ -750,8 +744,8 @@
       <div class="chapter__info" style="grid-column: 1 / -1; margin-top: var(--space-xl);">
         <h3 class="chapter__project-name" style="text-align: center;">LOST SIGNAL</h3>
         <div class="chapter__meta" style="justify-content: center;">
-          <span class="chapter__year">📅 2026</span>
-          <span class="chapter__role">💻 Immersive & CRT Glitch Interface</span>
+          <span class="chapter__year"> 2026</span>
+          <span class="chapter__role"> Immersive & CRT Glitch Interface</span>
         </div>
         <p class="chapter__synopsis" style="text-align: center; max-width: 800px; margin: 0 auto var(--space-md);">
           Một trải nghiệm khám phá tương tác độc nhất vô nhị. Thay vì giao diện web truyền thống,
@@ -768,13 +762,13 @@
             <img src="img/uiux/5.png" alt="Lost Signal UI" style="width: 100%; height: 100%; object-fit: cover;">
           </a>
         </div>
-        <p class="polaroid__caption">DATA CORRUPTION DETECTED 📡</p>
+        <p class="polaroid__caption">DATA CORRUPTION DETECTED </p>
       </div>
 
     </div>
 
     <div class="chapter__annotation" aria-hidden="true" style="bottom: 120px; right: 5%">
-      <span class="annotation-text">Thỏa sức viết code! 💻</span>
+      <span class="annotation-text">Thỏa sức viết code! </span>
     </div>
   </section>
 
@@ -790,7 +784,7 @@
 
     <div class="skills-grid">
       <div class="skill-card" data-skill="photo">
-        <div class="skill-card__icon">📸</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Nhiếp Ảnh</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="90"></div>
@@ -803,7 +797,7 @@
       </div>
 
       <div class="skill-card" data-skill="video">
-        <div class="skill-card__icon">📝</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Nội Dung & Kịch Bản</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="90"></div>
@@ -816,7 +810,7 @@
       </div>
 
       <div class="skill-card" data-skill="design">
-        <div class="skill-card__icon">🎨</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Thiết Kế Hình Ảnh</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="50"></div>
@@ -829,7 +823,7 @@
       </div>
 
       <div class="skill-card" data-skill="web">
-        <div class="skill-card__icon">🎬</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Video Editing</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="70"></div>
@@ -842,7 +836,7 @@
       </div>
 
       <div class="skill-card" data-skill="game">
-        <div class="skill-card__icon">🚀</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Khác</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="70"></div>
@@ -854,7 +848,7 @@
       </div>
 
       <div class="skill-card" data-skill="ai">
-        <div class="skill-card__icon">🤖</div>
+        <div class="skill-card__icon"></div>
         <h3 class="skill-card__title">Làm Hình AI</h3>
         <div class="skill-card__bar">
           <div class="skill-card__fill" data-percent="75"></div>
@@ -868,7 +862,7 @@
     </div>
 
     <div class="behind-scenes__annotation" aria-hidden="true">
-      <span class="annotation-text">đoàn làm phim 1 người 😂</span>
+      <span class="annotation-text">đoàn làm phim 1 người </span>
     </div>
   </section>
 
@@ -889,17 +883,17 @@
         <div class="credits__block">
           <h3 class="credits__role">Liên Hệ</h3>
           <ul class="credits__links">
-            <li><a href="mailto:anhtruong0423@gmail.com" class="credits__link">📧 anhtruong0423@gmail.com</a></li>
-            <li><a href="tel:0865322731" class="credits__link">📱 086 532 2731</a></li>
+            <li><a href="mailto:anhtruong0423@gmail.com" class="credits__link"> anhtruong0423@gmail.com</a></li>
+            <li><a href="tel:0865322731" class="credits__link"> 086 532 2731</a></li>
           </ul>
         </div>
 
         <div class="credits__block">
           <h3 class="credits__role">Mạng Xã Hội</h3>
           <ul class="credits__links">
-            <li><a href="https://www.facebook.com/anhtruong0423" target="_blank" class="credits__link">📘 Facebook</a>
+            <li><a href="https://www.facebook.com/anhtruong0423" target="_blank" class="credits__link"> Facebook</a>
             </li>
-            <li><a href="#" class="credits__link">🎵 TikTok</a></li>
+            <li><a href="#" class="credits__link"> TikTok</a></li>
           </ul>
         </div>
 
@@ -913,7 +907,7 @@
     <!-- Post-credit easter egg -->
     <div class="post-credit" id="post-credit">
       <p class="post-credit__text">
-        🎬 Post-credit scene: <br>
+        Post-credit scene: <br>
         <em>"Bộ phim tiếp theo đang được sản xuất..."</em>
       </p>
     </div>
@@ -972,8 +966,7 @@
   <script src="js/effects.js"></script>
   <script src="js/chapters.js"></script>
   <script src="js/main.js"></script>
-  <!-- Thư viện hiển thị Google 3D model-viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </body>
 
 </html>
