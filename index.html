@@ -80,17 +80,12 @@
     <div class="opening__bg" style="position: absolute; inset: 0; z-index: 0; pointer-events: auto;">
       <!-- Vùng hiển thị 3D Model làm Background -->
       <!-- Hãy đảm bảo file 3D được đặt đúng đường dẫn src="img/model.glb" -->
-      <model-viewer 
-        src="3d/rowboat_on_a_beach.glb" 
-        camera-controls 
-        auto-rotate 
-        auto-rotate-delay="0"
-        disable-zoom 
-        disable-pan
-        shadow-intensity="1" 
-        alt="A 3D model of a rowboat on a beach"
+      <model-viewer src="3d/rowboat_on_a_beach.glb" camera-controls auto-rotate auto-rotate-delay="0" disable-zoom
+        disable-pan shadow-intensity="1" alt="A 3D model of a rowboat on a beach"
         style="width: 100%; height: 100%; background-color: transparent;">
-        <div slot="progress-bar" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif;">Đang tải 3D Model (25MB)... Vui lòng đợi ⏳</div>
+        <div slot="progress-bar"
+          style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif;">
+          Đang tải 3D Model (25MB)... Vui lòng đợi ⏳</div>
       </model-viewer>
       <div class="opening__gradient" style="position: absolute; inset: 0; pointer-events: none;"></div>
     </div>
@@ -639,16 +634,17 @@
     <div class="chapter__header">
       <span class="chapter__number">05</span>
       <h2 class="chapter__title">Giao Diện & Trải Nghiệm</h2>
-      <span class="chapter__genre">💻 UI/UX & Web Design</span>
+      <span class="chapter__genre">UI/UX & Web Design</span>
     </div>
-    
+
     <div class="chapter__content">
       <!-- Mở đầu bằng một chút mô tả -->
-      <div class="chapter__info" style="grid-column: 1 / -1; text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 0;">
+      <div class="chapter__info"
+        style="grid-column: 1 / -1; text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 0;">
         <h3 class="chapter__project-name">Landing Page Showcase</h3>
         <p class="chapter__synopsis">
-          Biến các ý tưởng thành hiện thực qua những trải nghiệm web độc đáo. 
-          Từ cửa hàng văn phòng phẩm đáng yêu, thương hiệu chanh tươi mát, 
+          Biến các ý tưởng thành hiện thực qua những trải nghiệm web độc đáo.
+          Từ cửa hàng văn phòng phẩm đáng yêu, thương hiệu chanh tươi mát,
           đến trang đặt phòng du lịch phong cách tạp chí hay thậm chí là trải nghiệm phim tương tác bí ẩn.
         </p>
         <div class="chapter__tags" style="justify-content: center;">
@@ -667,15 +663,17 @@
           <span class="chapter__role">💻 Neo-Editorial Design</span>
         </div>
         <p class="chapter__synopsis">
-          Nền tảng đặt phòng du lịch lấy cảm hứng từ phong cách tạp chí cao cấp. 
-          Bố cục ấn tượng với những hình ảnh siêu thực, kiểu chữ sang trọng và trải nghiệm lướt ngang (horizontal scroll) mượt mà.
+          Nền tảng đặt phòng du lịch lấy cảm hứng từ phong cách tạp chí cao cấp.
+          Bố cục ấn tượng với những hình ảnh siêu thực, kiểu chữ sang trọng và trải nghiệm lướt ngang (horizontal
+          scroll) mượt mà.
         </p>
         <a href="ui/travel/index.html" target="_blank" class="chapter__cta">▶ Trải nghiệm ngay</a>
       </div>
       <div class="polaroid polaroid--tilt-right" style="max-width: 450px; width: 100%;">
         <div class="polaroid__image" style="aspect-ratio: 16/9; overflow: hidden; background: #000;">
           <a href="ui/travel/index.html" target="_blank">
-            <img src="img/ui-preview/travel-preview.png" alt="Wanderlux Travel Landing Page" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="img/uiux/1.png" alt="Wanderlux Travel Landing Page"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </a>
         </div>
         <p class="polaroid__caption">Du lịch phong cách tạp chí ✈️</p>
@@ -685,10 +683,11 @@
       <div class="polaroid polaroid--tilt-left" style="max-width: 450px; width: 100%;">
         <div class="polaroid__image" style="aspect-ratio: 16/9; overflow: hidden; background: #fdf8f4;">
           <a href="ui/totiny/index.html" target="_blank">
-            <img src="img/ui-preview/totiny-preview.png" alt="Totiny Landing Page" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+            <img src="img/uiux/2.png" alt="Totiny Landing Page"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
           </a>
         </div>
-        <p class="polaroid__caption">Văn phòng phẩm mèo béo 🐱</p>
+        <p class="polaroid__caption">Văn phòng phẩm mèo béo</p>
       </div>
       <div class="chapter__info">
         <h3 class="chapter__project-name">Totiny Stationery</h3>
@@ -697,7 +696,7 @@
           <span class="chapter__role">💻 Cute/Kawaii UI</span>
         </div>
         <p class="chapter__synopsis">
-          Trang đích dễ thương dành riêng cho hội yêu mèo. Giao diện ngập tràn màu sắc pastel, 
+          Trang đích dễ thương dành riêng cho hội yêu mèo. Giao diện ngập tràn màu sắc pastel,
           họa tiết động vật nhỏ xinh và những hiệu ứng cuộn trang mềm mại, thân thiện.
         </p>
         <a href="ui/totiny/index.html" target="_blank" class="chapter__cta">▶ Trải nghiệm ngay</a>
@@ -711,7 +710,7 @@
           <span class="chapter__role">💻 Vibrant & Fresh UI</span>
         </div>
         <p class="chapter__synopsis">
-          Thiết kế rực rỡ mang đầy năng lượng tích cực cho một thương hiệu lấy cảm hứng từ quả chanh vàng. 
+          Thiết kế rực rỡ mang đầy năng lượng tích cực cho một thương hiệu lấy cảm hứng từ quả chanh vàng.
           Sự kết hợp giữa hiệu ứng cắt lát (slice intro), màu sắc tương phản mạnh và layout Bento hiện đại.
         </p>
         <a href="ui/lemones/index.html" target="_blank" class="chapter__cta">▶ Trải nghiệm ngay</a>
@@ -719,20 +718,20 @@
       <div class="polaroid polaroid--tilt-right" style="max-width: 450px; width: 100%;">
         <div class="polaroid__image" style="aspect-ratio: 16/9; overflow: hidden; background: #fff017;">
           <a href="ui/lemones/index.html" target="_blank">
-            <img src="img/ui-preview/lemones-preview.png" alt="Lemon Landing Page" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="img/uiux/3.png" alt="Lemon Landing Page" style="width: 100%; height: 100%; object-fit: cover;">
           </a>
         </div>
-        <p class="polaroid__caption">Tươi mát ngày hè 🍋</p>
+        <p class="polaroid__caption">Tươi mát ngày hè</p>
       </div>
-      
+
       <!-- Dự án 4: Choco -->
       <div class="polaroid polaroid--tilt-left" style="max-width: 450px; width: 100%;">
         <div class="polaroid__image" style="aspect-ratio: 16/9; overflow: hidden; background: #fff0f5;">
           <a href="ui/choco/index.html" target="_blank">
-            <img src="img/ui-preview/choco-preview.png" alt="Choco Stationery" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="img/uiux/4.png alt=" Choco Stationery" style="width: 100%; height: 100%; object-fit: cover;">
           </a>
         </div>
-        <p class="polaroid__caption">Ngọt ngào như kẹo 🎀</p>
+        <p class="polaroid__caption">Ngọt ngào như kẹo</p>
       </div>
       <div class="chapter__info">
         <h3 class="chapter__project-name">Choco Stationery</h3>
@@ -755,8 +754,8 @@
           <span class="chapter__role">💻 Immersive & CRT Glitch Interface</span>
         </div>
         <p class="chapter__synopsis" style="text-align: center; max-width: 800px; margin: 0 auto var(--space-md);">
-          Một trải nghiệm khám phá tương tác độc nhất vô nhị. Thay vì giao diện web truyền thống, 
-          bạn được đắm chìm vào một Terminal phục hồi tín hiệu mang phong cách hacker cổ điển 
+          Một trải nghiệm khám phá tương tác độc nhất vô nhị. Thay vì giao diện web truyền thống,
+          bạn được đắm chìm vào một Terminal phục hồi tín hiệu mang phong cách hacker cổ điển
           kèm theo các hiệu ứng CRT glitch ấn tượng.
         </p>
         <div style="text-align: center;">
@@ -766,7 +765,7 @@
       <div class="polaroid" style="grid-column: 1 / -1; max-width: 800px; width: 100%;">
         <div class="polaroid__image" style="aspect-ratio: 21/9; overflow: hidden; background: #000;">
           <a href="ui/lost-signal/index.html" target="_blank">
-            <img src="img/ui-preview/lost-signal-preview.png" alt="Lost Signal UI" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="img/uiux/5.png" alt="Lost Signal UI" style="width: 100%; height: 100%; object-fit: cover;">
           </a>
         </div>
         <p class="polaroid__caption">DATA CORRUPTION DETECTED 📡</p>
@@ -934,6 +933,7 @@
       transform-style: preserve-3d;
       transform: perspective(1000px);
     }
+
     /* Các thành phần con nổi lên tạo chiều sâu 3D */
     .skill-card__icon,
     .skill-card__title,
@@ -942,12 +942,16 @@
       transform: translateZ(30px);
       transition: transform 0.3s ease;
     }
+
     .skill-card__icon {
-      transform: translateZ(60px); /* Nổi bật nhất */
+      transform: translateZ(60px);
+      /* Nổi bật nhất */
     }
+
     .skill-card:hover .skill-card__icon {
       transform: translateZ(80px) scale(1.1);
     }
+
     .skill-card:hover {
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
     }
