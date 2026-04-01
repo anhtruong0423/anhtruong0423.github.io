@@ -29,7 +29,7 @@ class ChapterManager {
     this.chapters.forEach((chapter, index) => {
       const header = chapter.querySelector('.chapter__header');
       const polaroid = chapter.querySelector('.polaroid');
-      const info = chapter.querySelector('.chapter__info');
+      const info = chapter.querySelector('.chapter__info, .chapter__content--profile');
       const annotation = chapter.querySelector('.chapter__annotation');
       const isReversed = chapter.classList.contains('chapter--reverse');
 
@@ -73,16 +73,28 @@ class ChapterManager {
         }, '-=0.3');
       }
 
-      // Info
+      // Info or Profile Content
       if (info) {
-        const children = info.children;
-        tl.from(children, {
-          x: isReversed ? -40 : 40,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.1,
-          ease: 'power2.out',
-        }, '-=0.4');
+        if (info.classList.contains('chapter__content--profile')) {
+          // Special animation for Chapter 1 profile components
+          tl.from(info.querySelectorAll('.profile-card, .timeline, .skills-summary'), {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power3.out',
+          }, '-=0.4');
+        } else {
+          // Default animation for other chapters
+          const children = info.children;
+          tl.from(children, {
+            x: isReversed ? -40 : 40,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: 'power2.out',
+          }, '-=0.4');
+        }
       }
 
       // Annotation
