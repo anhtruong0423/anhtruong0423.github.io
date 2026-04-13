@@ -56,6 +56,7 @@
       <li><a href="#chapter-5" class="nav__link" data-chapter="5">Ch.05</a></li>
       <li><a href="#chapter-6" class="nav__link" data-chapter="6">Ch.06</a></li>
       <li><a href="#chapter-7" class="nav__link" data-chapter="7">Ch.07</a></li>
+      <li><a href="#chapter-8" class="nav__link" data-chapter="8">Ch.08</a></li>
       <li><a href="#behind-scenes" class="nav__link" data-chapter="bts">BTS</a></li>
       <li><a href="#credits" class="nav__link" data-chapter="credits">Credits</a></li>
     </ul>
@@ -1141,6 +1142,595 @@
     </div>
   </section>
 
+  <!-- ============================================ -->
+  <!-- SECTION: CHAPTER 08 - GAME DEV WITH GODOT   -->
+  <!-- ============================================ -->
+  <section class="section chapter" id="chapter-8" data-chapter="8">
+    <div class="chapter__header">
+      <span class="chapter__number">08</span>
+      <h2 class="chapter__title">Làm Game</h2>
+      <span class="chapter__genre">Game Development — Godot Engine</span>
+    </div>
+
+    <div class="chapter__content chapter__content--stacked">
+      <div class="chapter__info" style="text-align: center; max-width: 860px; padding-bottom: 0;">
+        <h3 class="chapter__project-name">PickMiUp — Casual Pickup Game</h3>
+        <div class="chapter__meta" style="justify-content: center;">
+          <span class="chapter__year">2025 – 2026</span>
+          <span class="chapter__role">Game Developer / Designer</span>
+          <span class="chapter__role" style="background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; padding: 2px 12px; font-size: 0.78rem; letter-spacing: 0.05em;">Godot 4</span>
+        </div>
+        <p class="chapter__synopsis">
+          <em>PickMiUp</em> là một tựa game casual 2D được phát triển bằng <strong>Godot Engine</strong> — nơi người chơi
+          điều khiển một tài xế nhỏ xinh, chạy khắp thành phố để đón và trả khách đúng điểm dừng.
+          Game kết hợp cơ chế <strong>nhặt & giao (pick-up & drop-off)</strong> nhịp nhàng với bản đồ pixel art
+          đáng yêu, thử thách người chơi hoàn thành nhiều cuốc xe trong thời gian giới hạn.
+        </p>
+        <div class="chapter__tags" style="justify-content: center;">
+          <span class="tag">Godot 4</span>
+          <span class="tag">GDScript</span>
+          <span class="tag">2D Pixel Art</span>
+          <span class="tag">Casual Game</span>
+          <span class="tag">Tilemap</span>
+          <span class="tag">Game Design</span>
+        </div>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div class="pickmiup-features" style="grid-column: 1 / -1;">
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">🚗</div>
+          <h4 class="pickmiup-card__title">Cơ Chế Pickup</h4>
+          <p class="pickmiup-card__desc">
+            Tài xế di chuyển trên lưới bản đồ, đón khách tại các điểm màu sắc chỉ định và chở đến đúng điểm đến trước khi hết giờ.
+          </p>
+        </div>
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">🗺️</div>
+          <h4 class="pickmiup-card__title">Thiết Kế Tilemap</h4>
+          <p class="pickmiup-card__desc">
+            Bản đồ được xây dựng bằng hệ thống <strong>TileMap</strong> của Godot — các khu phố, con đường và địa điểm đặc trưng được bố trí ngẫu nhiên qua từng màn.
+          </p>
+        </div>
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">⏱️</div>
+          <h4 class="pickmiup-card__title">Race Against Time</h4>
+          <p class="pickmiup-card__desc">
+            Hệ thống đếm ngược tạo áp lực cho người chơi — mỗi cuốc xe hoàn thành đúng hạn sẽ cộng điểm và kéo dài thời gian.
+          </p>
+        </div>
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">🎮</div>
+          <h4 class="pickmiup-card__title">GDScript & Signals</h4>
+          <p class="pickmiup-card__desc">
+            Toàn bộ logic game được lập trình bằng <strong>GDScript</strong>, ứng dụng hệ thống Signal của Godot để điều phối sự kiện đón/trả khách và cập nhật UI.
+          </p>
+        </div>
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">🎨</div>
+          <h4 class="pickmiup-card__title">Pixel Art Style</h4>
+          <p class="pickmiup-card__desc">
+            Phong cách đồ họa pixel art dễ thương, bảng màu tươi sáng (teal, coral, vàng) mang lại cảm giác casual và thân thiện với mọi lứa tuổi.
+          </p>
+        </div>
+
+        <div class="pickmiup-card">
+          <div class="pickmiup-card__icon">📱</div>
+          <h4 class="pickmiup-card__title">Cross-Platform</h4>
+          <p class="pickmiup-card__desc">
+            Được thiết kế hướng tới xuất bản đa nền tảng (PC & Mobile). Godot 4 cho phép export nhanh chóng sang Android, Web và Desktop.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Video Demo -->
+      <div style="grid-column: 1 / -1; display: flex; justify-content: center; margin-top: var(--space-xl);">
+        <div class="pickmiup-video-wrap">
+          <div class="pickmiup-video-frame">
+            <video
+              id="pickmiup-demo-video"
+              src="game/demo.mp4"
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              poster=""
+              class="pickmiup-video"
+            ></video>
+            <!-- play overlay -->
+            <div class="pickmiup-video-overlay" id="pickmiup-video-overlay">
+              <button class="pickmiup-play-btn" id="pickmiup-play-btn" aria-label="Phát video demo">
+                <span class="pickmiup-play-icon">▶</span>
+              </button>
+              <span class="pickmiup-video-hint">Nhấn để xem gameplay</span>
+            </div>
+            <!-- Corner badge -->
+            <div class="pickmiup-badge">🎮 GAMEPLAY</div>
+          </div>
+          <p class="pickmiup-preview__caption">Video demo gameplay thực tế — PickMiUp (Godot 4)</p>
+        </div>
+      </div>
+
+      <!-- Game Skills -->
+      <div style="grid-column: 1 / -1; margin-top: var(--space-xl);">
+        <h4 class="pickmiup-skills-title">KỸ NĂNG GAME DEVELOPMENT</h4>
+        <div class="pickmiup-skills-grid">
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">🔷</span>
+              <span class="pickmiup-skill-name">Lập trình Godot</span>
+              <span class="pickmiup-skill-pct">80%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 80%; --clr: #7c3aed;"></div></div>
+            <p class="pickmiup-skill-desc">Sử dụng Godot 4 để xây dựng game 2D — từ scene management, collision, animation đến export đa nền tảng.</p>
+          </div>
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">🕹️</span>
+              <span class="pickmiup-skill-name">Thiết kế Gameplay</span>
+              <span class="pickmiup-skill-pct">75%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 75%; --clr: #0891b2;"></div></div>
+            <p class="pickmiup-skill-desc">Tư duy thiết kế level, cân bằng độ khó (difficulty curve), cơ chế phần thưởng và trải nghiệm người chơi (UX trong game).</p>
+          </div>
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">🔄</span>
+              <span class="pickmiup-skill-name">Core Loop Design</span>
+              <span class="pickmiup-skill-pct">70%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 70%; --clr: #10b981;"></div></div>
+            <p class="pickmiup-skill-desc">Thiết kế vòng lặp gameplay cốt lõi: <em>Đón khách → Di chuyển → Giao khách → Nhận điểm → Tăng áp lực</em> — tạo ra sức hút liên tục cho người chơi.</p>
+          </div>
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">📝</span>
+              <span class="pickmiup-skill-name">GDScript</span>
+              <span class="pickmiup-skill-pct">78%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 78%; --clr: #f59e0b;"></div></div>
+            <p class="pickmiup-skill-desc">Lập trình logic game bằng GDScript — xử lý input, signal systems, state machines cho nhân vật và AI đơn giản.</p>
+          </div>
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">🗺️</span>
+              <span class="pickmiup-skill-name">Level & TileMap Design</span>
+              <span class="pickmiup-skill-pct">72%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 72%; --clr: #be185d;"></div></div>
+            <p class="pickmiup-skill-desc">Dựng bản đồ bằng TileMap, bố trí vật thể, spawn điểm đón/trả khách và tuning gameplay flow qua từng màn chơi.</p>
+          </div>
+
+          <div class="pickmiup-skill-item">
+            <div class="pickmiup-skill-header">
+              <span class="pickmiup-skill-icon">🎨</span>
+              <span class="pickmiup-skill-name">Game Art & UI</span>
+              <span class="pickmiup-skill-pct">68%</span>
+            </div>
+            <div class="pickmiup-skill-bar"><div class="pickmiup-skill-fill" style="--pct: 68%; --clr: #a78bfa;"></div></div>
+            <p class="pickmiup-skill-desc">Thiết kế sprite pixel art, HUD in-game, màn hình menu và hiệu ứng visual feedback cho người chơi.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div style="grid-column: 1 / -1; text-align: center; margin-top: var(--space-xl);">
+        <h4 style="font-family: 'Pangolin', cursive; font-size: 1.1rem; opacity: 0.7; margin-bottom: var(--space-md); letter-spacing: 0.08em;">TECH STACK</h4>
+        <div class="pickmiup-techstack">
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">🔷</div>
+            <span class="pickmiup-tech__name">Godot 4</span>
+            <span class="pickmiup-tech__sub">Engine</span>
+          </div>
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">📝</div>
+            <span class="pickmiup-tech__name">GDScript</span>
+            <span class="pickmiup-tech__sub">Language</span>
+          </div>
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">🗺️</div>
+            <span class="pickmiup-tech__name">TileMap</span>
+            <span class="pickmiup-tech__sub">Level Design</span>
+          </div>
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">🎵</div>
+            <span class="pickmiup-tech__name">AudioStream</span>
+            <span class="pickmiup-tech__sub">Sound</span>
+          </div>
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">✨</div>
+            <span class="pickmiup-tech__name">Particles2D</span>
+            <span class="pickmiup-tech__sub">VFX</span>
+          </div>
+          <div class="pickmiup-tech">
+            <div class="pickmiup-tech__icon">📦</div>
+            <span class="pickmiup-tech__name">Scenes & Nodes</span>
+            <span class="pickmiup-tech__sub">Architecture</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chapter__annotation" aria-hidden="true" style="top: 15%; left: 4%;">
+      <span class="annotation-text">pixel art + code ✨</span>
+    </div>
+  </section>
+
+  <!-- ===== CSS STYLES FOR CHAPTER 08 ===== -->
+  <style>
+    /* PickMiUp Feature Cards */
+    .pickmiup-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      max-width: 960px;
+      margin: var(--space-xl) auto 0;
+    }
+    @media (max-width: 900px) {
+      .pickmiup-features { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .pickmiup-features { grid-template-columns: 1fr; }
+    }
+    .pickmiup-card {
+      background: linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(99,102,241,0.05) 100%);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pickmiup-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(139,92,246,0.5);
+      box-shadow: 0 12px 32px rgba(139,92,246,0.18);
+    }
+    .pickmiup-card__icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .pickmiup-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #a78bfa;
+      margin: 0;
+    }
+    .pickmiup-card__desc {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Video Demo */
+    .pickmiup-video-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      max-width: 800px;
+    }
+    .pickmiup-video-frame {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(139,92,246,0.5);
+      box-shadow: 0 0 50px rgba(139,92,246,0.3), 0 0 100px rgba(99,102,241,0.12);
+      position: relative;
+      background: #0f0e1a;
+    }
+    .pickmiup-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .pickmiup-video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: rgba(10, 8, 30, 0.65);
+      backdrop-filter: blur(4px);
+      transition: opacity 0.4s ease;
+      cursor: pointer;
+    }
+    .pickmiup-video-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .pickmiup-play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      border: 3px solid rgba(167,139,250,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 24px rgba(139,92,246,0.5);
+    }
+    .pickmiup-play-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 40px rgba(139,92,246,0.8);
+    }
+    .pickmiup-play-icon {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-left: 5px;
+    }
+    .pickmiup-video-hint {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.05em;
+    }
+    .pickmiup-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-radius: 20px;
+      padding: 4px 12px;
+      box-shadow: 0 4px 12px rgba(124,58,237,0.4);
+      font-family: 'Pangolin', cursive;
+      z-index: 5;
+    }
+    .pickmiup-preview__caption {
+      font-size: 0.8rem;
+      opacity: 0.55;
+      font-style: italic;
+    }
+
+    /* Game Skills */
+    .pickmiup-skills-title {
+      font-family: 'Pangolin', cursive;
+      font-size: 1.1rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-md);
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .pickmiup-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .pickmiup-skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .pickmiup-skills-grid { grid-template-columns: 1fr; }
+    }
+    .pickmiup-skill-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .pickmiup-skill-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139,92,246,0.35);
+    }
+    .pickmiup-skill-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .pickmiup-skill-icon { font-size: 1.2rem; }
+    .pickmiup-skill-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      flex: 1;
+    }
+    .pickmiup-skill-pct {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #a78bfa;
+      font-family: 'Pangolin', cursive;
+    }
+    .pickmiup-skill-bar {
+      height: 6px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .pickmiup-skill-fill {
+      height: 100%;
+      width: var(--pct);
+      background: var(--clr);
+      border-radius: 99px;
+      animation: skill-grow 1.2s cubic-bezier(0.4,0,0.2,1) both;
+    }
+    @keyframes skill-grow {
+      from { width: 0; }
+      to   { width: var(--pct); }
+    }
+    .pickmiup-skill-desc {
+      font-size: 0.78rem;
+      opacity: 0.72;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* City scene */
+    .pickmiup-city {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .pickmiup-road {
+      position: absolute;
+      background: rgba(255,255,255,0.07);
+    }
+    .pickmiup-road--h {
+      left: 0; right: 0;
+      top: 50%; transform: translateY(-50%);
+      height: 14%;
+    }
+    .pickmiup-road--v {
+      top: 0; bottom: 0;
+      left: 48%; transform: translateX(-50%);
+      width: 8%;
+    }
+    .pickmiup-building {
+      position: absolute;
+      left: var(--bx);
+      top: var(--by);
+      width: var(--bw);
+      height: var(--bh);
+      background: var(--bc);
+      border-radius: 4px 4px 0 0;
+      opacity: 0.75;
+      box-shadow: inset -3px 0 6px rgba(0,0,0,0.3);
+    }
+    .pickmiup-building::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: 0;
+      height: 25%;
+      background: rgba(255,255,255,0.12);
+    }
+    .pickmiup-point {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 900;
+      animation: pm-pulse 2s ease-in-out infinite;
+      z-index: 5;
+    }
+    .pickmiup-point--a { background: #f59e0b; color: #1c1410; }
+    .pickmiup-point--b { background: #10b981; color: #fff; animation-delay: 0.5s; }
+    .pickmiup-point--c { background: #ef4444; color: #fff; animation-delay: 1s; }
+    @keyframes pm-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 currentColor; }
+      50% { transform: scale(1.12); box-shadow: 0 0 12px 4px rgba(255,255,255,0.15); }
+    }
+    .pickmiup-passenger {
+      position: absolute;
+      font-size: 1.2rem;
+      z-index: 4;
+      animation: pm-bob 1.6s ease-in-out infinite;
+    }
+    @keyframes pm-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .pickmiup-car {
+      position: absolute;
+      font-size: 1.6rem;
+      z-index: 10;
+      left: 45%;
+      top: 46%;
+      animation: pm-drive 5s ease-in-out infinite alternate;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    }
+    @keyframes pm-drive {
+      0%   { left: 20%; top: 46%; }
+      25%  { left: 45%; top: 46%; }
+      50%  { left: 45%; top: 20%; }
+      75%  { left: 65%; top: 20%; }
+      100% { left: 65%; top: 60%; }
+    }
+
+    /* HUD */
+    .pickmiup-hud {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1.2rem;
+      z-index: 20;
+    }
+    .pickmiup-hud__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.1rem;
+    }
+    .pickmiup-hud__label {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      opacity: 0.6;
+      font-family: 'Pangolin', cursive;
+    }
+    .pickmiup-hud__val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Pangolin', cursive;
+    }
+    .pickmiup-hud__val--timer {
+      color: #fbbf24;
+    }
+
+    /* Tech Stack */
+    .pickmiup-techstack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .pickmiup-tech {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      min-width: 110px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .pickmiup-tech:hover {
+      transform: translateY(-5px);
+      background: rgba(139,92,246,0.12);
+    }
+    .pickmiup-tech__icon { font-size: 1.8rem; }
+    .pickmiup-tech__name { font-size: 0.85rem; font-weight: 700; }
+    .pickmiup-tech__sub  { font-size: 0.7rem; opacity: 0.55; }
+  </style>
+
   <!-- ===== MODAL XEM KẾ HOẠCH ===== -->
   <div class="tcsk-modal" id="tcsk-modal" role="dialog" aria-modal="true" aria-label="Xem kế hoạch">
     <div class="tcsk-modal__backdrop" id="tcsk-modal-backdrop"></div>
@@ -2137,6 +2727,32 @@
   <script src="js/effects.js"></script>
   <script src="js/chapters.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- PickMiUp Video Player Script -->
+  <script>
+    (function() {
+      const overlay = document.getElementById('pickmiup-video-overlay');
+      const playBtn = document.getElementById('pickmiup-play-btn');
+      const video   = document.getElementById('pickmiup-demo-video');
+      if (!overlay || !video) return;
+
+      function togglePlay() {
+        if (video.paused) {
+          video.play();
+          overlay.classList.add('hidden');
+        } else {
+          video.pause();
+          overlay.classList.remove('hidden');
+        }
+      }
+
+      overlay.addEventListener('click', togglePlay);
+      // Khi video kết thúc, hiện lại overlay
+      video.addEventListener('ended', function() {
+        overlay.classList.remove('hidden');
+      });
+    })();
+  </script>
 
 </body>
 
